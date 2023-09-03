@@ -1,0 +1,393 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.mainPage, .NavBarPA{
+  background-color: #F0F3F5;
+}
+.header{
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.links{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.MuiSvgIcon-root{
+  width: 30px;
+}
+
+
+/* Блок с рекламой мобильного приложения */
+.advertisement{
+  background-color: #F0F3F5;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.titleOfAdv{
+  height: 15%;
+  width: 100%;
+  text-align: center;
+}
+.titleOfAdv > h2{
+  font-size: 40px;
+  margin: 1%;
+}
+.titleOfAdv > p{
+  font-size: 22px;
+  margin: 1%;
+  color:rgba(5, 38, 48, 0.62);
+}
+.AdvContent{
+  height: 85%;
+  display: flex;
+}
+.AdvInfo{
+  width: 40%;
+  margin-left: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.AdvLinks{
+  height: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items:flex-start;
+  padding-left: 0px;
+}
+.AdvTitle{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+}
+.AdvTitle > div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.AdvMainImg{
+  width: 40%;
+  height: 100%;
+  margin-right: 10%;
+}
+.AdvTitle > div > p{
+  font-size: 20px;
+  margin: 1%;
+  color:rgba(5, 38, 48, 0.62);
+}
+.AdvTitle > div > h6{
+  font-size: 30px;
+  margin: 1%;
+}
+
+/* Блок с поиском поездок */
+
+.SearchSection{
+  height: 400px;
+  background-color: #0083fe;
+  background-image: url(./img/background.webp);
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;  
+  align-items: flex-start;
+}
+.SearchSectionActive{
+  background: #033754;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  justify-content: center;  
+  align-items: flex-start;
+}
+.SearchTitleDisable{
+  display: none;
+}
+.SearchTitle{
+  height: 50%;
+}
+.SearchTitle > h2{
+  margin: 0;
+font-size: 50px;
+color: white;
+margin-left: 35px;
+}
+.SearchTitle  > h4{
+  margin: 0;
+  margin-top: 15px;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.79);
+  text-align: left;
+  margin-left: 35px;
+}
+.SearchForm{
+  display: flex;
+  /* margin-left: 35px; */
+  width: 100%;
+}
+.inputSection{
+  width: 20%;
+  /* height: 45px; */
+}
+.inputSection:first-child{
+  margin-left: 35px;
+}
+
+#starting_point{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+} 
+label{
+  display: block;
+  font-size: 18px;
+  padding-right: 230px;
+  color: rgba(8, 41, 59, 0.38);
+}
+.label-text{
+  transform: translate(15px, -45px);
+  transition: all 0.5s
+}
+.requiredField:focus + .label-text{
+  transform: translate(-13px, -65px) scale(0.85);
+  transition: all 0.5s;
+}
+.requiredField:valid + .label-text{
+  transform: translate(-13px, -65px) scale(0.85);
+}
+.inputSection > input{
+  outline: none;
+  border: none;
+  margin-right: 5px;
+  width: 96.6%;
+  height: 45px; 
+  font-size: 18px;
+  padding-top: 25px;
+  padding-left: 11px;
+}
+.requiredField{
+  outline: none;
+  border: none;
+  margin-right: 5px;
+  width: 96.6%;
+  height: 71px;
+  font-size: 18px;
+  padding-top: 25px;
+  padding-left: 11px;
+}
+#ending_point, #starting_point{
+  width: 100%;
+}
+#date{
+  padding-bottom: 1px;
+  padding-right:10px;
+  width: 95%;
+}
+#amount{
+  padding-left: 5px;
+  width: 100%;
+}
+#toLabel{
+  padding-right: 250px;
+}
+#dateLabel{
+  padding-right: 255px;
+}
+#amountLabel{
+  padding-right: 200px;
+  
+}
+.hr{
+  width: 2px solid;
+  height: 50px;
+  color: rgba(3, 44, 59, 0.16);
+  margin: 0;
+  margin-top: 10px;
+}
+.buttunWrap{
+  width: 15%;
+  height: 71px;
+}
+.searchButton{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #2A5FCF;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.searchButton:hover{
+  background-color: #1d56d0;
+}
+/* Header */
+.InfoLinks{
+  width: 50%;
+  text-align: left;
+}
+.infolink{
+  margin-right: 5%;
+}
+/* Личный кабинет */
+.personalInfoLabel{
+  color: black;
+}
+/* Регистрация */
+
+.signUpForm, .LoginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  height: 100%;
+  width: 40%;
+  margin: auto;
+  background-color: #F0F3F5;
+}
+.emailInput, .passwordInput{
+  width: 60%;
+  display: inline-block;
+  background: #f1f1f1;
+  
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin: 6px 0 16px 0; 
+}
+.signUpForm > h1, .LoginForm > h1{
+  margin-bottom: 2%;
+}
+.signUpForm > p, .LoginForm > p{
+  width:100%;
+  text-align: center;
+}
+.signUpForm > label, .LoginForm > label {
+  width:100%;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+.SignUpBtn, .LoginBtn{
+  background-color: #2A5FCF;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 64%;
+  opacity: 0.9;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+/* блок с результатами поиска */
+.Content{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 5%;
+}
+.TripInfo{
+
+  width: 60%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.sectionFrom, .sectionTo, .sectionPrice, .sectionBtn{
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+.sectionTo{
+  width: 20%;
+}
+.sectionBtn{
+  padding-left: 6%;
+  
+}
+.sectionPrice{
+  align-items: end;
+  width: 15%;
+}
+.timeStyle{
+  display: flex;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+.fromStyle, .toStyle{
+  font-size: 15px;
+  margin-top: 4px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.priceStyle{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.paymentStyle{
+  width: 150px;
+  height: 10px;
+  color: #6D900A;
+  border: 1px solid #6D900A;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  border-radius: 6px;
+  padding: 3px 0px 10px 7px;
+  margin-top: 2px;
+}
+.orderBtn{
+  color: #fff;
+  background-color: #2A5FCF;
+  width: 90%;
+  height: 50%;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 21px;
+  box-shadow: unset;
+  border: 0;
+  border-radius: 4px;
+}
+.orderBtn > div{
+  opacity: 0.64;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+}
+.dateStyle{
+  font-size: 13px;
+  line-height: 16px;
+  margin-left: 8px;
+  font-weight: 200;
+  padding-top: 2%;
+}
