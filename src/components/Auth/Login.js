@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom'
 import { logInUser } from '../../firebase';
 import { startSession } from '../../session';
 import { useState } from 'react';
+import { auth } from '../../firebase'
 
 
-const Login = ({setIsHaveAccount, setIsCurrentUser}) => {
+const Login = ({setIsHaveAccount, setIsCurrentUser, getInfoAboutUser }) => {
     let WindowHigh = document.documentElement.clientHeight - 200
 
     const [error, setError] = useState('');
     const [emailLogIn, setEmailLogIn] = useState('')
     const [passwordLogIn, setPasswordLogIn] = useState('')
 
+    
     const onSubmit = async (event) => {
       event.preventDefault();
       setError("");
@@ -20,6 +22,7 @@ const Login = ({setIsHaveAccount, setIsCurrentUser}) => {
         let loginResponse = await logInUser(emailLogIn, passwordLogIn);
         startSession(loginResponse.user);//запоминаем текущего пользователя
         setIsCurrentUser(true)
+        getInfoAboutUser(auth.currentUser.uid)
       } catch (error) {
         console.error(error.message)
         setError(error.message)

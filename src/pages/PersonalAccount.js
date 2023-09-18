@@ -4,7 +4,7 @@ import { endSession, isLoggedIn, getSession } from '../session'
 import { Link } from 'react-router-dom'
 import TabContent from '../components/PersonalAccountComponents/TabContent'
 
-const PersonalAccount = ( { setIsCurrentUser, currentEmail, setCurrentEmail } ) => {
+const PersonalAccount = ( { setIsCurrentUser, currentEmail, setCurrentEmail, currentUserFirstName, currentUserLastName, currentUserPhoneNumber, setCurrentUserFirstName, setCurrentUserLastName, setCurrentUserPhoneNumber, getInfoAboutUser } ) => {
     const [visiableTab, setVisiableTab] = useState('PersonalInfo')
 
     useEffect(() => {
@@ -48,6 +48,16 @@ const PersonalAccount = ( { setIsCurrentUser, currentEmail, setCurrentEmail } ) 
 
                         currentEmail={currentEmail}
                         setCurrentEmail={setCurrentEmail}
+
+                        currentUserFirstName={currentUserFirstName}
+                        currentUserLastName={currentUserLastName}
+                        currentUserPhoneNumber={currentUserPhoneNumber}
+
+                        setCurrentUserFirstName={setCurrentUserFirstName}
+                        setCurrentUserLastName={setCurrentUserLastName}
+                        setCurrentUserPhoneNumber={setCurrentUserPhoneNumber}
+
+                        getInfoAboutUser={getInfoAboutUser}
                     />
                 </div>
             </div>
