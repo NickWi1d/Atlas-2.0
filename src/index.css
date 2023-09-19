@@ -391,3 +391,32 @@ hr {
   font-weight: 200;
   padding-top: 2%;
 }
+
+.ShowDitail{
+  height: 30px;
+  background-color: red;
+  width: 60%;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(8, 41, 59, 0.04);
+}
+.ShowDetailBox{
+  margin-left: 5px;
+ 
+}
+.DurationBox{
+  margin-right: 5px;
+}
+.ShowDetailBtn{
+  color:#2A5FCF;
+  font-size: 16px;
+  font-weight: 500;
+  border:none;
+  background-color: inherit;
+}
+.Duration{
+  font-weight: 400;
+  color: rgba(5, 38, 48, 0.62);
+}

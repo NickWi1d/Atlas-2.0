@@ -47,7 +47,7 @@ const TripInfo = () => {
                 <div className='priceStyle'>{currentTrip.price} Br</div>
                 <div className='paymentStyle'>Наличными или картой</div>
                 <div>за 1 место</div>
-                {/* <div>свободно { currentTrip.unarmored } мест</div> */}
+                <div>свободно { currentTrip.unarmored } мест</div>
             </div>
             <div className='sectionBtn'>
                 <button type="button" className='orderBtn'>Заказать
@@ -57,7 +57,11 @@ const TripInfo = () => {
         </div>
         <div className='ShowDitail'>
             <div className='ShowDetailBox'>
-                <button className='ShowDetailBtn'>Показать детали</button> 
+                <button className='ShowDetailBtn'
+                >
+                    Показать детали
+
+                </button> 
             </div>
             <div className='TypeOfBusBox'>
                 <div className='TypeOfBus'>Mercedes-Benz, Sprinter</div> 

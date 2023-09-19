@@ -10,13 +10,16 @@ const SearchTrips = ( { setisSearch, isSearch } ) => {
   const { fromValue, setfromValue, toValue, settoValue, dateValue, setdateValue, amountValue, setamountValue, currentTrip, setCurrentTrip } = useContext(MainPageContext)
   // 
   async function getTrips(){
-    setisSearch(true)
+
     const q = query(collection(db, "bus's trips"), where("from", "==", fromValue), where("to", "==", toValue), where("date", "==", dateValue), where("unarmored", ">=", Number(amountValue[0])));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       setCurrentTrip({date:doc.data().date, driver:doc.data().driver, finishTime:doc.data().finishTime, from:doc.data().from, price:doc.data().price, time:doc.data().time, to:doc.data().to, trip:doc.data().trip, type:doc.data().type, unarmored:doc.data().unarmored})
-      console.log(currentTrip);
+      
     })
+    setisSearch(true)
+    console.log(currentTrip);
+
   }
   return (
     <div className={isSearch ? 'SearchSectionActive' : 'SearchSection'}>
